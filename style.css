@@ -1,0 +1,22 @@
+body{
+    background-color: blueviolet;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+}
+
+h1{
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+.progressBarContainer{
+    border: 1px black solid;
+    background-color: wheat;
+    width: 30%;
+    height: 10px;
+}
+
