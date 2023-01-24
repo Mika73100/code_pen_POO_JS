@@ -25,39 +25,54 @@
         <div class="contianer"> 
             <div class="row">
                 <div class="col-4 md-col-3 w-300">
-                    <h1>ICI LE HTML</h1>
-                    <textarea id="htmlBox" maxlength="100"></textarea>
+                    <h2>ICI LE HTML</h2>
+                    <textarea id="htmlBox" maxlength="100" onclick="loading"></textarea>
 
-                    <div id="togg1"><div class="spinner-border" role="status">
-                        <span class="sr-only"></span></div></div>
+                    <!-- ici le giff-->
+                    <img class="gif" src="./Rolling-1s-200px.gif" width="50px">
+
                     <div id="togg2">Cliquez-moi !</div>
-
 
 
                     <span id="count">0/100</span>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar"></div>
                         <div id="restant"></div>
-                      </div>
+                    </div>
                 </div>
 
                 
                 
                 <div class="col-4 md-col-3 w-300">
-                    <h1>Ici le CSS</h1>
+                    <h2>Ici le CSS</h2>
                     <textarea id="cssBox"></textarea>
                 </div>
 
                 <div class="col-4 md-col-3 w-300">
-                    <h1>Ici le JS</h1>
+                    <h2>Ici le JS</h2>
                     <textarea id="jsBox"></textarea>
                 </div>
                 
                 <div id="resultBox"></div>
                 
             </div>
-            <button onclick="run()">run</button>
+            <button id="btn" onclick="run()">RUN LE JS</button>
+
+            <!-- AUTRES EXO -->
+
+            <br><br>
+            <p id="parag1">Outlook.com est un service de messagerie web de la société Microsoft. <br>
+                Créé en 1996 par Jack Smith sous le nom de « Hotmail », ce service est acquis en 1997 par Microsoft,<br>
+                qui le renomme MSN Hotmail, puis Windows Live Hotmail. Wikipédia</p>
+            <button id="btn" onclick="changer_style()">Changer de style</button>
+
+            <p id="parag2">Outlook.com est un service de messagerie web de la société Microsoft. <br>
+                Créé en 1996 par Jack Smith sous le nom de « Hotmail », ce service est acquis en 1997 par Microsoft,<br>
+                qui le renomme MSN Hotmail, puis Windows Live Hotmail. Wikipédia</p>
+            <button id="btnrun" onclick="changerStyles()">Changer de style</button>
+
+
         </div>
     </body>
-    <script src="app.js"></script>
+    <script id="js" src="app.js"></script>
 </html>

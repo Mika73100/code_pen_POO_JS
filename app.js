@@ -1,6 +1,6 @@
 //Créer un bouton pour jouer le script
 //Créer 3 blocks contenant 3 languages !=
-// value enter  \n
+// value enter 
 
 
 const htmlBox = document.querySelector("#htmlBox");
@@ -9,18 +9,17 @@ const css = document.querySelector("#css");
 const js = document.querySelector("#jsBox");
 const result = document.querySelector("#resultBox");
 const progressBar = document.querySelector(".progress-bar");
-
+const gif = document.querySelector(".gif");
 
 
 htmlBox.addEventListener("keydown", addCode);
 cssBox.addEventListener("keydown", addStyle);
-
-function togg1(){
-    togg1.addEventListener.style.hidden;
-    togg2.addEventListener.style.
-}
+jsBox.addEventListener("keydown", addlogique);
+htmlBox.addEventListener("mouseover", spinnerborder);
 
 
+
+//ici je modifie le innerHTML avec en plus la barre de progression.
 function addCode() {
     result.innerHTML = htmlBox.value;
     let nbCaractere = htmlBox.value.length;
@@ -41,26 +40,53 @@ function addCode() {
 }
 
 
+//ici je modifie le css du innertext.
+    function addStyle() {
+        css.innerText = cssBox.value;
+    }
+
+    function addlogique() {
+        js.innerText = jsBox.value;
+    }
+
+    function run() {
+        eval(jsBox.value);
+    }
+
+    let btnrun = document.getElementById("btn")
+    btnrun.addEventListener('click',function(){
+        console.log();
+    })
 
 
-
-function addStyle() {
-    css.innerText = cssBox.value;
-}
-
-function addJs() {
-    innerHTML = js.value;
-}
-
-function run() {
-    // eval()
-    new Function(js.value)();
+    function spinnerborder(){
+            gif.style.visibility=visible;
+        }
     
+
+
+
+
+
+
+
+
+
+
+////////////////////////Autre exo////////////////////////////////////
+
+let btn = document.getElementById("btn")
+let para = document.getElementById("parag1, parag2")
+btn.addEventListener('click',function(){
+    para.classList.toggle("active")
+})
+
+    function changer_style() {
+    let p = document.getElementById("parag1")
+    p.classList.toggle('active')
 }
 
-
- const button = document.querySelector('button');
-
- button.addEventListener('click', event => {
-   button.innerHTML = `Nombre de clics : ${event.detail}`;
- });
+    function changerStyles(){
+    let p = document.getElementById("parag2")
+    p.classList.toggle('active')
+}
