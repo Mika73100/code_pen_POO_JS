@@ -1,25 +1,13 @@
-//Créer un bouton pour jouer le script
-//Créer 3 blocks contenant 3 languages !=
-// value enter 
-
-
-const htmlBox = document.querySelector("#htmlBox");
-const cssBox = document.querySelector("#cssBox");
-const css = document.querySelector("#css");
-const js = document.getElementById("#jsBox");
-const result = document.querySelector("#resultBox");
-const progressBar = document.querySelector(".progress-bar");
-const gif = document.querySelector(".gif");
-
-
-htmlBox.addEventListener("keydown", addCode);
-cssBox.addEventListener("keydown", addStyle);
-jsBox.addEventListener("keydown", addlogique);
-htmlBox.addEventListener("mouseover", spinnerborder);
-
 
 
 //ici je modifie le innerHTML avec en plus la barre de progression.
+
+const htmlBox = document.querySelector("#htmlBox");
+const result = document.querySelector("#resultBox");
+const progressBar = document.querySelector(".progress-bar");
+
+htmlBox.addEventListener("keydown", addCode);
+
 function addCode() {
     result.innerHTML = htmlBox.value;
     let nbCaractere = htmlBox.value.length;
@@ -41,52 +29,80 @@ function addCode() {
 
 
 //ici je modifie le css du innertext.
+
+const css = document.querySelector("#css");
+const cssBox = document.querySelector("#cssBox");
+
+cssBox.addEventListener("keydown", addStyle);
+
     function addStyle() {
         css.innerText = cssBox.value;
     }
 
+
+//je modifie le js 
+
+const js = document.getElementById("jsBox");
+
+let btn = document.getElementById("btn");
+
+jsBox.addEventListener("keyup", addlogique);
+
     function addlogique() {
-        js.innerText = jsBox.value;
+        let addjs = document.getElementById("jsBox").value;
+        document.getElementById('js').innerText = addjs;
     }
 
-    function run() {
-        eval(jsBox.value);
-    }
+    function run(){
+       return jsBox && eval(js.value)();
+    };
 
-    let btnrun = document.getElementById("btn")
-    btnrun.addEventListener('click',function(){
-        console.log();
-    })
+    //document.getElementById("lol").style.color="green";
 
 
-    function spinnerborder(){
-            gif.style.visibility=visible;
-        }
-    
+//ici je met le gif en route
 
-
+// function mafonction() {
+//     //console.log ("mon code fonctionne");
+//     var img = document.querySelector("#htmlBox");
+//     img.style.visibility=visible;
+// };
 
 
 
+// loader 
+htmlBox.addEventListener("mouseout", gifLoaderOut)
+htmlBox.addEventListener("mouseover", gifLoaderOver);
 
-
-
-
-
-////////////////////////Autre exo////////////////////////////////////
-
-let btn = document.getElementById("btn")
-let para = document.getElementById("parag1, parag2")
-btn.addEventListener('click',function(){
-    para.classList.toggle("active")
-})
-
-    function changer_style() {
-    let p = document.getElementById("parag1")
-    p.classList.toggle('active')
+function gifLoaderOut(){
+    document.querySelector(".gif").style.visibility = "hidden";
 }
 
-    function changerStyles(){
-    let p = document.getElementById("parag2")
-    p.classList.toggle('active')
+function gifLoaderOver(){
+    document.querySelector(".gif").style.visibility = "visible";
+     
+}
+
+cssBox.addEventListener("mouseout", gifLoaderOut)
+cssBox.addEventListener("mouseover", gifLoaderOver);
+
+function gifLoaderOut(){
+    document.querySelector(".gif").style.visibility = "hidden";
+}
+
+function gifLoaderOver(){
+    document.querySelector(".gif").style.visibility = "visible";
+     
+}
+
+jsBox.addEventListener("mouseout", gifLoaderOut)
+jsBox.addEventListener("mouseover", gifLoaderOver);
+
+function gifLoaderOut(){
+    document.querySelector(".gif").style.visibility = "hidden";
+}
+
+function gifLoaderOver(){
+    document.querySelector(".gif").style.visibility = "visible";
+     
 }
