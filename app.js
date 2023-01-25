@@ -62,15 +62,10 @@ jsBox.addEventListener("keyup", addlogique);
 
 //ici je met le gif en route
 
-// function mafonction() {
-//     //console.log ("mon code fonctionne");
-//     var img = document.querySelector("#htmlBox");
-//     img.style.visibility=visible;
-// };
 
 
+// loader dans le html
 
-// loader 
 htmlBox.addEventListener("mouseout", gifLoaderOut)
 htmlBox.addEventListener("mouseover", gifLoaderOver);
 
@@ -83,6 +78,9 @@ function gifLoaderOver(){
      
 }
 
+
+// loader dans le css
+
 cssBox.addEventListener("mouseout", gifLoaderOut)
 cssBox.addEventListener("mouseover", gifLoaderOver);
 
@@ -94,6 +92,8 @@ function gifLoaderOver(){
     document.querySelector(".gif").style.visibility = "visible";
      
 }
+
+// loader dans le js
 
 jsBox.addEventListener("mouseout", gifLoaderOut)
 jsBox.addEventListener("mouseover", gifLoaderOver);
