@@ -6,7 +6,7 @@
 const htmlBox = document.querySelector("#htmlBox");
 const cssBox = document.querySelector("#cssBox");
 const css = document.querySelector("#css");
-const js = document.querySelector("#jsBox");
+const js = document.getElementById("#jsBox");
 const result = document.querySelector("#resultBox");
 const progressBar = document.querySelector(".progress-bar");
 
