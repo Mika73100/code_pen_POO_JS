@@ -75,7 +75,7 @@ function gifLoaderOut(){
 
 function gifLoaderOver(){
     document.querySelector(".gif").style.visibility = "visible";
-     
+
 }
 
 
@@ -90,7 +90,7 @@ function gifLoaderOut(){
 
 function gifLoaderOver(){
     document.querySelector(".gif").style.visibility = "visible";
-     
+
 }
 
 // loader dans le js
@@ -104,5 +104,5 @@ function gifLoaderOut(){
 
 function gifLoaderOver(){
     document.querySelector(".gif").style.visibility = "visible";
-     
+
 }
