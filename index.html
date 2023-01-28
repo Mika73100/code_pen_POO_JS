@@ -8,6 +8,8 @@
             content="width=device-width, initial-scale=1.0"
         />
         <title>Code Pen JS POO</title>
+
+        <button id="clicblanc" onclick="toggleTheme()">ici dark mode</button>
         
         
         <link
@@ -24,7 +26,7 @@
         <div class="contianer"> 
             <div class="row">
                 <div class="col-4 md-col-3 w-300">
-                    <h2>ICI LE HTML</h2>
+                    <h2 id="h2">ICI LE HTML</h2>
                     <textarea id="htmlBox" maxlength="100" onmouseover="mafonction();"></textarea>
 
                     <!-- ici le giff-->
@@ -39,13 +41,15 @@
                     </div>
                 </div>
    
+
                 <div class="col-4 md-col-3 w-300">
-                    <h2>Ici le CSS</h2>
+                    <h2 id="h2">Ici le CSS</h2>
                     <textarea id="cssBox"></textarea>
                 </div>
 
+                
                 <div class="col-4 md-col-3 w-300">
-                    <h2>Ici le JS</h2>
+                    <h2 id="h2">Ici le JS</h2>
                     <textarea id="jsBox"></textarea>
                 </div>
                 
@@ -53,6 +57,8 @@
                 
             </div>
             <button id="btn" onclick="run()">RUN LE JS</button>
+
+            
 
         </div>
     </body>
